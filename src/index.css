@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Pastikan margin dan padding tidak mengganggu layout */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Menggunakan font modern */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #1e1e1e, #333);  /* Background gradasi gelap */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);  /* Bayangan untuk efek 3D */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;  /* Menambahkan padding untuk ruang */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 2px;  /* Menambahkan jarak antar huruf untuk efek futuristik */
+  text-transform: uppercase;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #21a1f1;  /* Warna hover */
+  transform: scale(1.1);  /* Efek scale pada hover */
+}
+
+.nav-menu a svg {
+  color: #61dafb;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover svg {
+  color: #21a1f1;  /* Warna hover untuk ikon */
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #61dafb;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 50px 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #61dafb;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hero-section {
+  background:linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('assets/qaback.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #61dafb;
+  color: #222;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #21a1f1;
+}
+
+.cta-button svg {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  .cta-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f4f4f9;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-left {
+  flex: 1;
+  padding-right: 40px;
+  text-align: left;
+}
+
+.about-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.about-icons {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.icon {
+  text-align: center;
+}
+
+.icon p {
+  font-size: 16px;
+  color: #333;
+}
+
+.about-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photo {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-left {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .about-photo {
+    width: 100%;
+    max-width: 300px;
+  }
+}
