@@ -5,10 +5,11 @@ const Header = () => {
     return (
       <header>
         <div className="header-container">
-          <h1 className="logo">Raiza Kurniawan - QA Engineer</h1>
+          <h1 className="logo">"/"</h1>
           <nav className="nav-menu">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
+            <a href="#tools">Tools</a>
             <a href="#contact">Contact</a>
             <a href="https://github.com/raizakurniawan" target="_blank" rel="noopener noreferrer">
               <FaGithub size={24} />
