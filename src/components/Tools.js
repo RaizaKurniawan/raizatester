@@ -5,7 +5,7 @@ import { FaBug, FaToolbox } from "react-icons/fa"; // Contoh ikon alat QA
 const tools = [
   {
     id: 1,
-    name: "Selenium",
+    name: "Selenium IDE",
     description: "Automation testing for web applications.",
     icon: "/assets/selenium-logo.png", // Masukkan path logo tools
   },

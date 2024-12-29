@@ -121,7 +121,7 @@ footer {
   color: #fff;
   padding: 20px 0;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 0;
 }
 
 .hero-section {
@@ -480,4 +480,151 @@ footer {
 
 .contact-icon {
   font-size: 20px;
+}
+
+.achievements-section {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1e1e1e, #333);
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #61dafb;
+  letter-spacing: 2px;
+}
+
+.achievements-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px);
+}
+
+.achievement-icon {
+  margin-bottom: 15px;
+}
+
+.achievement-card h3 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.achievement-card h4 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #61dafb;
+}
+
+.achievement-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  color: #ccc;
+  margin: 0px 20px 0px 20px;
+}
+
+.projects-section {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #2e3b4e, #1b2a38); /* Background untuk bedakan dengan section experience */
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #61dafb;
+  letter-spacing: 1.5px;
+}
+
+.projects-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center; /* Agar card berada di tengah */
+  flex-wrap: wrap; /* Membuat card tetap responsif dan tidak meluber */
+  margin-top: 30px;
+}
+
+.project-category {
+  font-size: 26px;
+  color: #61dafb;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px; /* Ukuran card yang lebih kecil */
+  max-width: 100%; /* Membuat card responsif */
+  margin: 10px; /* Memberikan sedikit jarak antar card */
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-8px);
+}
+
+.project-icon {
+  margin-bottom: 12px;
+  align-self: center;
+}
+
+.project-card h4 {
+  font-size: 22px;
+  margin: 8px 0;
+  color: #fff;
+}
+
+.project-card h5 {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #61dafb;
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+  color: #ccc;
+  margin-top: auto; /* Push text to the bottom of the card */
+}
+
+/* Menambahkan responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+  .projects-cards {
+    flex-direction: column; /* Mengubah flex ke arah vertikal pada layar kecil */
+    align-items: center; /* Centering cards */
+  }
+
+  .project-card {
+    width: 100%; /* Membuat card memanjang ke seluruh lebar */
+    margin-bottom: 20px; /* Memberikan jarak antar card */
+  }
 }
