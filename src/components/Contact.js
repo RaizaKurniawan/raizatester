@@ -10,7 +10,7 @@ const Contact = () => {
       <p className="contact-subtitle">I'm always open to collaborating on exciting projects or just having a chat!</p>
       <div className="contact-links">
         <motion.a
-          href="mailto:raiza.kurniawan@example.com"
+          href="mailto:raizakurniawan@gmail.com"
           className="contact-link"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
