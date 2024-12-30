@@ -29,7 +29,7 @@ const achievements = [
 const Achievements = () => {
   return (
     <section id="achievements" className="achievements-section">
-      <h2 className="section-title">Achievements</h2>
+      <h2 className="achievements-title">Achievements</h2>
       <div className="achievements-cards">
         {achievements.map((achievement) => (
           <motion.div

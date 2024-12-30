@@ -1,12 +1,21 @@
-import React from "react";
-import { FaGithub, FaLinkedin } from 'react-icons/fa';  // Ikon untuk LinkedIn dan Github
+import React, { useState } from "react";
+import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';  // Ikon untuk LinkedIn dan Github
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
     return (
       <header>
         <div className="header-container">
-          <h1 className="logo">"/"</h1>
-          <nav className="nav-menu">
+          <h1 className="logo">{"{qa_here}"}</h1>
+          <div className="burger-menu" onClick={toggleMenu}>
+            {isMenuOpen ? <FaTimes size={24} color="#fff" /> : <FaBars size={24} color="#fff" />}
+          </div>
+          <nav className={`nav-menu ${isMenuOpen ? "open" : ""}`}>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#tools">Tools</a>

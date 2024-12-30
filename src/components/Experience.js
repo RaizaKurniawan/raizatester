@@ -89,7 +89,7 @@ const experiences = [
 const Experience = () => {
   return (
     <section id="experience" className="experience-section">
-      <h2 className="section-title">Experience</h2>
+      <h2 className="experience-title">Experience</h2>
       <div className="experience-cards">
         {experiences.map((exp) => (
           <motion.div
