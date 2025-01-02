@@ -38,6 +38,12 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;  /* Menambahkan padding untuk ruang */
+  height: inherit;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
 }
 
 .logo {
@@ -94,60 +100,6 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
-
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column; /* Tumpuk logo dan menu */
-    text-align: center;
-    gap: 15px; /* Tambahkan jarak antar elemen */
-  }
-
-  .logo {
-    font-size: 20px; /* Sesuaikan ukuran logo */
-  }
-
-  .nav-menu {
-    flex-direction: column; /* Tumpuk menu navigasi */
-    gap: 10px; /* Kurangi jarak antar elemen */
-  }
-
-  .nav-menu a {
-    font-size: 16px; /* Kurangi ukuran font untuk layar kecil */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 18px; /* Ukuran lebih kecil untuk layar sangat kecil */
-  }
-
-  .burger-menu {
-    display: block; /* Tampilkan burger menu */ 
-  }
-
-  .nav-menu {
-    display: none; /* Sembunyikan menu navigasi default */
-    position: absolute;
-    top: 60px; /* Di bawah header */
-    right: 0;
-    background: #333;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-
-  .nav-menu.open {
-    display: flex; /* Tampilkan menu saat burger di klik */
-  }
-
-  .nav-menu a {
-    margin: 10px 0;
-    font-size: 16px;
-  }
-}
-
 
 section {
   padding: 50px 20px;
@@ -233,19 +185,6 @@ footer {
   margin-left: 10px;
 }
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 36px;
-  }
-  .hero-subtitle {
-    font-size: 18px;
-  }
-  .cta-button {
-    font-size: 16px;
-    padding: 8px 16px;
-  }
-}
-
 .about-section {
   display: flex;
   justify-content: center;
@@ -315,25 +254,6 @@ footer {
 .about-photo:hover {
   transform: scale(1.05);
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-left {
-    text-align: center;
-    padding-right: 0;
-  }
-
-  .about-photo {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
 
 .experience-section {
   padding: 50px 20px;
@@ -665,5 +585,106 @@ footer {
   font-size: 12px;
   color: #fff;
   text-align: left;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  .cta-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-left {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .about-photo {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .burger-menu {
+    display: block; /* Tampilkan icon burger */
+    margin-left: auto; /* Tarik burger ke sisi kanan */
+  }
+
+  .header-container {
+    flex-direction: row; /* Tumpuk logo dan menu */
+    text-align: center;
+    gap: 15px; /* Tambahkan jarak antar elemen */
+  }
+
+  .logo {
+    font-size: 20px; /* Sesuaikan ukuran logo */
+  }
+
+  .nav-menu {
+    flex-direction: column; /* Tumpuk menu navigasi */
+    gap: 10px; /* Kurangi jarak antar elemen */
+    display: none; /* Sembunyikan menu navigasi default */
+    position: absolute;
+    top: 60px; /* Di bawah header */
+    right: 0;
+    background: #333;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-menu {
+    display: flex;
+  }
+
+  .nav-menu a {
+    margin: 10px 0;
+    font-size: 16px; /* Kurangi ukuran font untuk layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px; /* Ukuran lebih kecil untuk layar sangat kecil */
+  }
+
+  .burger-menu {
+    display: block; /* Tampilkan burger menu */ 
+  }
+
+  .nav-menu {
+    display: none; /* Sembunyikan menu navigasi default */
+    position: absolute;
+    top: 60px; /* Di bawah header */
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-menu.open {
+    display: flex; /* Tampilkan menu saat burger di klik */
+  }
+
+  .nav-menu a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
 }
 
