@@ -20,7 +20,7 @@ const Header = () => {
             <a href="#experience">Experience</a>
             <a href="#tools">Tools</a>
             <a href="#contact">Contact</a>
-            <a href="https://github.com/raizakurniawan" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/RaizakKurniawan" target="_blank" rel="noopener noreferrer">
               <FaGithub size={24} />
             </a>
             <a href="https://www.linkedin.com/in/raiza-kurniawan/" target="_blank" rel="noopener noreferrer">

@@ -18,7 +18,7 @@ const Contact = () => {
           <FaEnvelope className="contact-icon" /> Email Me
         </motion.a>
         <motion.a
-          href="https://www.linkedin.com/in/raizakurniawan"
+          href="https://www.linkedin.com/in/raiza-kurniawan"
           className="contact-link"
           target="_blank"
           rel="noopener noreferrer"
@@ -28,7 +28,7 @@ const Contact = () => {
           <FaLinkedin className="contact-icon" /> LinkedIn
         </motion.a>
         <motion.a
-          href="https://github.com/raizakurniawan"
+          href="https://github.com/RaizaKurniawan"
           className="contact-link"
           target="_blank"
           rel="noopener noreferrer"
