@@ -6,12 +6,12 @@ import { FaCheckCircle } from "react-icons/fa";
 const experiences = [
   {
     id: 1,
-    title: "Lead Web3 QA Engineer",
+    title: "Web3 Lead QA Engineer",
     company: "Confiction Labs.",
     description: (
       <>
         <p className="experience-paragraph">
-          As a Lead Web3 QA Engineer, I am responsible for ensuring the quality and functionality of Web3 products manually and automatically. I make collaboration with various teams to make sure that blockchain transactions and Web3 features working seamlessly. In an Agile environment, I do the same thing with the team during Backlog Grooming and Sprint Planning to deliver high-quality products. 
+          As a Leader, I am responsible for ensuring the quality and functionality of Web3 products manually and automatically. I make collaboration with various teams to make sure that blockchain transactions and Web3 features working seamlessly. In an Agile environment, I do the same thing with the team during Backlog Grooming and Sprint Planning to deliver high-quality products. 
         </p>
         <ul className="task-list">
           {[
@@ -60,8 +60,8 @@ const experiences = [
   },
   {
     id: 3,
-    title: "Associate Software QA",
-    company: "BenihBaik",
+    title: "Associate QA Software",
+    company: "BenihBaik.com",
     description: (
         <>
           <p className="experience-paragraph">

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBug, FaToolbox } from "react-icons/fa"; // Contoh ikon alat QA
+
 
 const tools = [
   {
