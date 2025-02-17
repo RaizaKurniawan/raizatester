@@ -22,6 +22,7 @@ const Header = () => {
             <a href="#experience" title="Experience">Experience</a>
             <a href="#tools" title="Tools">Tools</a>
             <a href="#contact" title="Contact Me">Contact</a>
+            <a href="#achievements" title="Achievements">Achievements</a>
             <a href="https://github.com/RaizaKurniawan" target="_blank" rel="noopener noreferrer" title="Github">
               <FaGithub size={24} />
             </a>
