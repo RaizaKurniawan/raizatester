@@ -120,6 +120,17 @@ const CVDownload = () => {
     doc.text('6. Burp Suite - Basic Security Test.', 25, yPos); 
     yPos += 17;
 
+    // Certification Section
+    doc.setFontSize(14);
+    doc.setFillColor(230, 230, 255); 
+    doc.rect(20, yPos, 170, 10, 'F'); yPos += 7;
+    doc.text('Certification', 105, yPos, { align: 'center' }); yPos += 9;
+    doc.setFontSize(12);
+    doc.text('Cypress Certificate', 25, yPos); yPos += 6;
+    doc.text('Udemy | Cypress: Web Automation Testing from Zero to Hero', 25, yPos); yPos += 6;
+    doc.text('https://udemy-certificate.s3.amazonaws.com/pdf/UC-df403fb7-082a-4d7f-b883-41281b42fd96.pdf', 25, yPos);
+    yPos += 17;
+    
     // Contact Section
     doc.setFontSize(14);
     doc.setFillColor(230, 230, 255); 
