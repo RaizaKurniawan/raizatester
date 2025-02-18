@@ -17,7 +17,7 @@ const experiences = [
           {[
             "Released 11 products, 3 products Web3 related, and contributed to gains 231.69 ETH equal to 650K in US Dollar",
             "Created and Designed a Test Plan, Scenario Test Cases, Bugs Tracking Report, and Post Mort-em", 
-            "Performed manual and automated testing: Smoke Test, Integration Test, API Test, Security Test, Performance Test, Stress Test, Load Test, UI Test, and Web3 Test",
+            "Performed manual and automatd testing: Smoke Test, Integration Test, API Test, Security Test, Performance Test, Stress Test, Load Test, UI Test, and Web3 Test",
             "Collaborated with Tech Lead, PM, and Chief Product Officer to produce robust, secure, and functional Web3 products",
             "Ensured Blockchain transactions functioned correctly (Deposit, Staking, Withdrawal, AirDrop, Quest, and Auction)",
             "Managed the QA team and assigned product Web3 Supervisors for each product",
@@ -72,7 +72,7 @@ const experiences = [
               "Reproduce the vulnerability using BurpSuite",
               "Scenario and Test Case Development. Designed detailed scenarios and test cases to validate functionality, performance, and user requirements.",
               "Test Execution, Conducted various test types across platforms, including: Smoke Testing, Regression Testing, Full Testing, Bug Fixing Verification Testing, Mobile Application Testing (Android & iOS), and Payment system Testing.",
-              "Automation Teting, Built and executed automation test scenarios using Cypress and Selenium IDE to improve test efficiency.",
+              "Automation Testing, Built and executed automation test scenarios using Cypress and Selenium IDE to improve test efficiency.",
               "Bug Reporting, Documented and reported bugs with detailed reproduction steps, ensuring effective communication with developers for resolution.",
             ].map((task, index) => (
               <li key={index}>
