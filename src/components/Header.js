@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';  // Ikon untuk LinkedIn dan Github
-import CVDownload from "./CVDownload"; // Import the CVDownload component
-
+import { FaGithub, FaLinkedin, FaBars, FaTimes, FaFilePdf } from 'react-icons/fa';  // Ikon untuk LinkedIn dan Github
+// import CVDownload from "./CVDownload"; // Import the CVDownload component
+// import ResumeCVDownload from "./ResumeCVDownload";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,8 +29,8 @@ const Header = () => {
             <a href="https://www.linkedin.com/in/raiza-kurniawan/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
               <FaLinkedin size={24} />
             </a>
-            <a href = "/downloadRaizaCV" rel="noopener noreferrer" title="Download CV"> 
-              <CVDownload /> 
+            <a href = "#contact" title="Download Resume & CV"> 
+                <FaFilePdf size={24} />
             </a>
           </nav>
         </div>

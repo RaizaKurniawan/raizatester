@@ -15,8 +15,8 @@ const experiences = [
         </p>
         <ul className="task-list">
           {[
-            "Created Test Plan", 
-            "Created and developed Test Scenarios transitioning from manual to automation", 
+            "Released 11 products, 3 products Web3 related, and contributed to gains 231.69 ETH equal to 650K in US Dollar",
+            "Created and Designed a Test Plan, Scenario Test Cases, Bugs Tracking Report, and Post Mort-em", 
             "Performed manual and automated testing: Smoke Test, Integration Test, API Test, Security Test, Performance Test, Stress Test, Load Test, UI Test, and Web3 Test",
             "Collaborated with Tech Lead, PM, and Chief Product Officer to produce robust, secure, and functional Web3 products",
             "Ensured Blockchain transactions functioned correctly (Deposit, Staking, Withdrawal, AirDrop, Quest, and Auction)",
@@ -42,10 +42,10 @@ const experiences = [
         </p>
         <ul className="task-list">
             {[
-              "API Testing Standarization: Collaborated with senior colleagues to define and implement standardized API testing methodologies.",
+              "API Testing Standardization: Collaborated with senior colleagues to define and implement standardized API testing methodologies in the company.",
               "Test Case Development: Designed and developed API test case scenarios with response codes as expected outcomes, ensuring accuracy and robustness.",
-              "Security Testing: Conducted basic security testing, including SQL Injection tests, to identify vulnerabilities and strengthen API security.",  
-              "Performance Testing: Performed API performance and stress tests to assess reliability and scalability under varying workloads.",
+              "Security Testing: Conducted basic security testing, including SQL Injection tests, to identify vulnerabilities and strengthen API security using Postman.",  
+              "Performance Testing: Performed API performance and stress tests to assess reliability and scalability under varying workloads using JMeter and K6.",
               "Automation Testing: Built and maintained automated API tests using two dedicated tools to enhance testing efficiency and consistency.",
             ].map((task, index) => (
               <li key={index}>
@@ -69,6 +69,7 @@ const experiences = [
           </p>
           <ul className="task-list">
             {[
+              "Reproduce the vulnerability using BurpSuite",
               "Scenario and Test Case Development. Designed detailed scenarios and test cases to validate functionality, performance, and user requirements.",
               "Test Execution, Conducted various test types across platforms, including: Smoke Testing, Regression Testing, Full Testing, Bug Fixing Verification Testing, Mobile Application Testing (Android & iOS), and Payment system Testing.",
               "Automation Teting, Built and executed automation test scenarios using Cypress and Selenium IDE to improve test efficiency.",

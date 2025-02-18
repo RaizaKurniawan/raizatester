@@ -1,7 +1,7 @@
 // Contact.js
 import React from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaFilePdf } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -16,6 +16,26 @@ const Contact = () => {
           whileTap={{ scale: 0.95 }}
         >
           <FaEnvelope className="contact-icon" /> Email Me
+        </motion.a>
+        <motion.a 
+          href="/assets/RaizaKurniawan_Resume2025.pdf"
+          className="contact-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <FaFilePdf className="contact-icon" /> Download Resume
+        </motion.a>
+        <motion.a 
+          href="/assets/RaizaKurniawan_CV2025.pdf"
+          className="contact-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <FaFilePdf className="contact-icon" /> Download CV
         </motion.a>
         <motion.a
           href="https://www.linkedin.com/in/raiza-kurniawan"
