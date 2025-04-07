@@ -1,7 +1,7 @@
 // Contact.js
 import React from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLinkedin, FaGithub, FaFilePdf } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaFilePdf, FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -9,6 +9,16 @@ const Contact = () => {
       <h2 className="contact-title">Contact Me</h2>
       <p className="contact-subtitle">I'm always open to collaborating on exciting projects or just having a chat!</p>
       <div className="contact-links">
+      <motion.a
+          href="https://wa.me/6281224221110"
+          className="contact-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <FaWhatsapp className="contact-icon" /> Whatsapp Me!
+        </motion.a>
         <motion.a
           href="mailto:raizakurniawan@gmail.com"
           className="contact-link"
