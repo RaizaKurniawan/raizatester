@@ -80,6 +80,7 @@ const Achievements = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
+              onClick={closeModal} // Close modal when clicking the overlay
             >
               <motion.div
                 className="modal-content"
@@ -87,6 +88,7 @@ const Achievements = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
                 transition={{ duration: 0.3 }}
+                onClick={(e) => e.stopPropagation()}
               >
                 <button onClick={closeModal} className="modal-close-button">
                   &times;
