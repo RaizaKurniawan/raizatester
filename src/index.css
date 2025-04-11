@@ -763,3 +763,215 @@ footer {
 
 }
 
+/* Performance Review Button */
+.performance-rev-button-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.performance-rev-button {
+  padding: 10px 20px;
+  background-color: #61dafb;
+  color: #222;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.performance-rev-button:hover {
+  background-color: #21a1f1;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #f4f4f9; /* Light background to match the slides */
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close-button:hover {
+  color: #61dafb;
+}
+
+.modal-title {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #61dafb;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.modal-swiper {
+  max-width: 1000px; /* Match the previous slide width */
+  padding: 20px;
+}
+
+.modal-slide {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px; /* Match the previous slide height */
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  object-fit: contain;
+}
+
+/* Style for Swiper navigation arrows */
+.modal-swiper .swiper-button-prev,
+.modal-swiper .swiper-button-next {
+  color: #fff;
+  background: rgba(97, 218, 251, 0.7);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.modal-swiper .swiper-button-prev:hover,
+.modal-swiper .swiper-button-next:hover {
+  background: rgba(97, 218, 251, 1);
+}
+
+.modal-swiper .swiper-button-prev::after,
+.modal-swiper .swiper-button-next::after {
+  font-size: 24px;
+}
+
+/* Style for pagination dots */
+.modal-swiper .swiper-pagination {
+  margin-top: 20px;
+}
+
+.modal-swiper .swiper-pagination-bullet {
+  background: #61dafb;
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+}
+
+.modal-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #21a1f1;
+  width: 12px;
+  height: 12px;
+}
+
+/* Download Link */
+.download-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #61dafb;
+  color: #222;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+  background-color: #21a1f1;
+}
+
+/* Responsive adjustments for the modal */
+@media (max-width: 1024px) {
+  .modal-content {
+    max-width: 95%;
+  }
+
+  .modal-swiper {
+    padding: 10px;
+  }
+
+  .modal-slide {
+    max-width: 90%;
+    height: 450px;
+  }
+
+  .modal-swiper .swiper-button-prev,
+  .modal-swiper .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-swiper .swiper-button-prev::after,
+  .modal-swiper .swiper-button-next::after {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+
+  .modal-slide {
+    max-width: 90%;
+    height: 300px;
+    border-radius: 8px;
+  }
+
+  .modal-swiper .swiper-button-prev,
+  .modal-swiper .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-swiper .swiper-button-prev::after,
+  .modal-swiper .swiper-button-next::after {
+    font-size: 20px;
+  }
+
+  .modal-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+
+  .modal-swiper .swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+  }
+}
