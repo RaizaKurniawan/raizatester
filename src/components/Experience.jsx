@@ -38,16 +38,19 @@ const experiences = [
     description: (
       <>
         <p className="experience-paragraph">
-        As a Senior Quality Assurance Engineer at Agate, I collaboration with other senior team members to establish standardized API testing practices. My role developing API test case scenarios based on response codes as expected outcomes, ensuring comprehensive coverage of functional and edge cases. Additionally, I contributed to security testing by implementing foundational SQL Injection tests and conducted API performance and stress testing to ensure system reliability under high load. Automation was a key focus, where we developed automated API tests using two specialized tools.
+         As a Senior Quality Assurance Engineer at Agate, I collaborated with senior team members to establish standardized API testing practices. I developed comprehensive API test case scenarios based on expected response codes, ensuring functional and edge case coverage. I contributed to basic security testing using DevTools and BurpSuite, and conducted performance and stress testing to validate system stability under high load. I automated API test flows using Postman, Playwright, MochaJS, Swagger, and Scalar. I also worked across platforms to ensure responsive and cross-device compatibility using iOS and Android emulators, BrowserStack, and LambdaTest. In addition, I tracked bugs using Notion, verified fixes, and led release and regression testing cycles.
         </p>
         <ul className="task-list">
             {[
               "API Testing Standardization: Collaborated with senior colleagues to define and implement standardized API testing methodologies in the company.",
               "Test Case Development: Designed and developed API test case scenarios with response codes as expected outcomes, ensuring accuracy and robustness.",
-              "Security Testing: Conducted basic security testing, including SQL Injection tests, to identify vulnerabilities and strengthen API security using Postman.",  
-              "Performance Testing: Performed API performance and stress tests to assess reliability and scalability under varying workloads using JMeter and K6.",
-              "Automation Testing: Built and maintained automated API tests using two dedicated tools to enhance testing efficiency and consistency.",
-            ].map((task, index) => (
+              "Security Testing: Performed basic security testing using DevTools and BurpSuite to identify vulnerabilities and strengthen API workflows.",
+              "Performance Testing: Conducted API performance and stress tests using JMeter, Locust, and K6 to ensure system scalability.",
+              "Automation Testing: Built and maintained automated API test flows using Postman, Playwright, MochaJS, Swagger, and Scalar.",
+              "Cross-Device Testing: Ensured responsive and platform compatibility using iOS Simulator, Android Emulator, BrowserStack, and LambdaTest.",
+              "Bug Tracking: Logged and managed issues in Notion with clear steps to reproduce, and collaborated with developers for timely resolution.",
+              "Bug Verification & Release: Verified bug fixes, executed regression tests, and supported release testing in staging and production environments.",
+             ].map((task, index) => (
               <li key={index}>
                 <FaCheckCircle style={{ color: '#61dafb', marginRight: '10px' }} /> 
                 {task}
