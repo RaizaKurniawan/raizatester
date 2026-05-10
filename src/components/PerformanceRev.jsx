@@ -5,6 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaDownload } from "react-icons/fa";
+import pdfFile from '../../public/assets/Raiza2024-PerformanceReviews.pdf';
+
 
 // Array of slide paths (15 slides)
 const performanceSlides = Array.from({ length: 16 }, (_, index) => `/assets/performance-slides/performance-slide${index + 1}.png`);
@@ -40,8 +42,8 @@ const PerformanceRev = () => {
             );
           })}
         </Swiper>
-        <a href="/assets/Raiza2024-PerformanceReviews.pdf" download className="download-link">
-          Download Performance Review PDF
+        <a href={pdfFile} download className="download-link">
+          Download Performance Review
           <FaDownload style={{ marginLeft: "8px" }} />
         </a>
       </div>

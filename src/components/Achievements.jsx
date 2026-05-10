@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaAward, FaDatabase, FaTrophy } from "react-icons/fa"; // Icons for achievements
+import { FaAward, FaDatabase, FaTrophy, FaDownload } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { FaDownload } from "react-icons/fa";
 
 const achievements = [
   {
@@ -14,47 +13,48 @@ const achievements = [
     title: "Database Destruction Discovery",
     year: "2010",
     description: "Uncovered a hospital's database destruction via network scanning (RS Mitra Kasih, Cimahi).",
-    icon: <FaDatabase size={40} color="#61dafb" />,
+    icon: <FaDatabase size={38} color="#00d4ff" />,
   },
   {
     id: 2,
     title: "The Best Employee (3 times)",
     year: "2019",
     description: "Awarded 'The Best Employee' 3 times consecutively in one year (Integral).",
-    icon: <FaTrophy size={40} color="#61dafb" />,
+    icon: <FaTrophy size={38} color="#00d4ff" />,
   },
   {
     id: 3,
     title: "The Best Employee Performance",
     year: "2022",
     description: "Awarded 'The Best Employee Performance' (Agate).",
-    icon: <FaAward size={40} color="#61dafb" />,
+    icon: <FaAward size={38} color="#00d4ff" />,
   },
 ];
 
-// Array of slide paths (15 slides)
-const performanceSlides = Array.from({ length: 16 }, (_, index) => `/assets/performance-slides/performance-slide${index + 1}.png`);
+const performanceSlides = Array.from(
+  { length: 16 },
+  (_, i) => `/assets/performance-slides/performance-slide${i + 1}.png`
+);
 
 const Achievements = () => {
-
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section id="achievements" className="achievements-section">
+      <span className="achievements-eyebrow">Recognition</span>
       <h2 className="achievements-title">Achievements</h2>
+
       <div className="achievements-cards">
-        {achievements.map((achievement) => (
+        {achievements.map((achievement, i) => (
           <motion.div
             key={achievement.id}
             className="achievement-card"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: achievement.id * 0.3 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55, delay: i * 0.15 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
           >
             <div className="achievement-icon">{achievement.icon}</div>
             <h3>{achievement.title}</h3>
@@ -64,69 +64,80 @@ const Achievements = () => {
         ))}
       </div>
 
-      {/* Button to open the modal */}
       <div className="performance-rev-button-container">
-          <button onClick={openModal} className="performance-rev-button">
-            View Performance Review 2024
-          </button>
+        <motion.button
+          onClick={() => setIsModalOpen(true)}
+          className="performance-rev-button"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          View Performance Review 2024
+        </motion.button>
       </div>
 
-        {/* Modal for Performance Review */}
+      <AnimatePresence>
         {isModalOpen && (
-          <AnimatePresence>
+          <motion.div
+            className="modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={() => setIsModalOpen(false)}
+          >
             <motion.div
-              className="modal-overlay"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              className="modal-content"
+              initial={{ scale: 0.82, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.82, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              onClick={closeModal} // Close modal when clicking the overlay
+              onClick={(e) => e.stopPropagation()}
             >
-              <motion.div
-                className="modal-content"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                onClick={(e) => e.stopPropagation()}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="modal-close-button"
               >
-                <button onClick={closeModal} className="modal-close-button">
-                  &times;
-                </button>
-                <h2 className="modal-title">Performance Review 2024</h2>
-                <Swiper
-                  modules={[Navigation, Pagination, Autoplay]}
-                  spaceBetween={20}
-                  slidesPerView={1}
-                  navigation
-                  pagination={{ clickable: true }}
-                  autoplay={{ delay: 5000, disableOnInteraction: false }}
-                  loop={true}
-                  className="modal-swiper"
-                  lazy={true}
-                >
-                  {performanceSlides.map((slide, index) => {
-                    const altText = `Performance Review Slide ${index + 1}`;
-                    return (
-                      <SwiperSlide key={index}>
-                        <img
-                          src={slide}
-                          alt={altText}
-                          className="modal-slide swiper-lazy"
-                          loading="lazy"
-                        />
-                        <div className="swiper-lazy-preloader"></div>
-                      </SwiperSlide>
-                    );
-                  })}
-                </Swiper>
-                <a href="/performance-review-2024.pdf" download className="download-link">
-                  Download Performance Review PDF <FaDownload style={{ marginLeft: "8px" }} />
-                </a>
-              </motion.div>
+                &times;
+              </button>
+
+              <h2 className="modal-title">Performance Review 2024</h2>
+
+              <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
+                spaceBetween={20}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                loop={true}
+                className="modal-swiper"
+                lazy={true}
+              >
+                {performanceSlides.map((slide, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={slide}
+                      alt={`Performance Review Slide ${index + 1}`}
+                      className="modal-slide swiper-lazy"
+                      loading="lazy"
+                    />
+                    <div className="swiper-lazy-preloader" />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              <a
+                href="/performance-review-2024.pdf"
+                download
+                className="download-link"
+              >
+                Download Performance Review PDF
+                <FaDownload style={{ marginLeft: "8px" }} />
+              </a>
             </motion.div>
-          </AnimatePresence>
+          </motion.div>
         )}
+      </AnimatePresence>
     </section>
   );
 };
