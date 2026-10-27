@@ -2,7 +2,7 @@ import React, { useEffect, useRef} from "react";
 import { motion } from "framer-motion";
 import { FaMobileAlt, FaShoppingCart, FaCogs, FaServer, FaFileInvoiceDollar, FaBroadcastTower } from "react-icons/fa";
 
-const qaProjects = [
+export const qaProjects = [
   {
     id: 1,
     title: "Lets Flip",
@@ -23,7 +23,7 @@ const qaProjects = [
   },
 ];
 
-const nonQaProjects = [
+export const nonQaProjects = [
   {
     id: 1,
     title: "Integral Asia Pacific",

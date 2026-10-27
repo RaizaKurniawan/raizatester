@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaBriefcase, FaCode, FaSeedling, FaCheckCircle, FaClipboardCheck } from "react-icons/fa";
 
-const experiences = [
+export const experiences = [
   {
     id: 1,
     accentColor: "#f59e0b",
@@ -164,6 +164,7 @@ const Experience = () => {
           </motion.div>
         ))}
       </div>
+      <a href="/experience" className="experience-all-link">View all experience</a>
     </section>
   );
 };

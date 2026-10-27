@@ -430,8 +430,9 @@ header.scrolled {
 }
 
 .experience-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
   margin-top: 48px;
   max-width: 1200px;
@@ -440,6 +441,8 @@ header.scrolled {
 }
 
 .experience-card {
+  flex: 0 1 calc((100% - 48px) / 3);
+  min-width: min(300px, 100%);
   background: rgba(255, 255, 255, 0.04);
   padding: 28px 24px;
   border-radius: 16px;
@@ -511,6 +514,24 @@ header.scrolled {
 
 .task-icon:hover {
   opacity: 0.75;
+}
+
+.experience-all-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 32px;
+  border: 1px solid var(--accent);
+  border-radius: 30px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.experience-all-link:hover {
+  background: var(--accent);
+  color: #0a0a0f;
 }
 
 /* ===== TOOLS ===== */
