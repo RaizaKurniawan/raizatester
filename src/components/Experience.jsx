@@ -1,9 +1,43 @@
 import { motion } from "framer-motion";
-import { FaBriefcase, FaCode, FaSeedling, FaCheckCircle } from "react-icons/fa";
+import { FaBriefcase, FaCode, FaSeedling, FaCheckCircle, FaClipboardCheck } from "react-icons/fa";
 
 const experiences = [
   {
     id: 1,
+    accentColor: "#f59e0b",
+    title: "Senior QA Engineer",
+    company: "OCX",
+    icon: <FaClipboardCheck size={28} color="#f59e0b" />,
+    description: (
+      <>
+        <p className="experience-paragraph">
+          As the sole QA Engineer for a trading-card collectibles marketplace, I own the
+          quality of the web app, admin panel, and iOS/Android app, covering buying,
+          offers and negotiation, escrow, vault storage, shipping, and payments. I built
+          a staged, evidence-based QA pipeline powered by AI coding agents so every
+          verdict is traceable to the exact build it was tested on.
+        </p>
+        <ul className="task-list">
+          {[
+            "QA Pipeline: Designed and ran a staged pipeline per ticket (analysis, test design, review gate, execution, automation, bug report), applied to 369 tickets.",
+            "Mutation Testing: Deliberately broke fixes on 239 tickets to prove their tests actually catch regressions, exposing tests that only passed because of mocks.",
+            "Release Blockers: Caught critical issues that passing unit tests missed, including storage cleanup, SQL query, and payment-gateway edge cases, with root cause and fix guidance.",
+            "Bug Reporting: Failed 32 tickets with reproduction steps, build SHA, root-cause hypothesis, and suggested fix, and triaged new bugs in Linear by priority and environment.",
+            "Cross-Platform Testing: Tested end to end on web, admin, iOS Simulator (Appium), and Android Emulator (adb, uiautomator), including deep links, English and Indonesian copy, and sandbox payments.",
+            "Automation Testing: Contributed to a 300+ spec Playwright suite (web, admin, CMS, smoke, visual), including read-only specs that run safely against shared staging data.",
+            "Backend Testing: Ran integration tests against real PostgreSQL with Testcontainers and verified data migrations up, down, and idempotently before sign-off.",
+          ].map((task, index) => (
+            <li key={index}>
+              <FaCheckCircle className="task-icon" style={{ color: "#f59e0b" }} />
+              {task}
+            </li>
+          ))}
+        </ul>
+      </>
+    ),
+  },
+  {
+    id: 2,
     accentColor: "#00d4ff",
     title: "Web3 Lead QA Engineer",
     company: "Confiction Labs.",
@@ -36,7 +70,7 @@ const experiences = [
     ),
   },
   {
-    id: 2,
+    id: 3,
     accentColor: "#7c3aed",
     title: "Senior Quality Assurance",
     company: "Agate",
@@ -72,7 +106,7 @@ const experiences = [
     ),
   },
   {
-    id: 3,
+    id: 4,
     accentColor: "#10b981",
     title: "Associate QA Software",
     company: "BenihBaik.com",
