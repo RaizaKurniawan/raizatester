@@ -11,7 +11,7 @@ import { FaTerminal } from "react-icons/fa";
 // Tools without an icon in react-icons/si get a monogram instead.
 export const tools = [
   { name: "Playwright", mono: "Pw", color: "#2EAD33", category: "Automation", level: 3, where: "300+ spec suite at OCX, API flows at Agate" },
-  { name: "Cypress", icon: SiCypress, color: "#1B1E2E", category: "Automation", level: 3, where: "E2E suites at Benih Baik, Udemy certified" },
+  { name: "Cypress", icon: SiCypress, color: "#1B1E2E", category: "Automation", level: 3, where: "E2E suites for PT KAI at Labtek Indie and at Benih Baik" },
   { name: "Selenium IDE", icon: SiSelenium, color: "#43B02A", category: "Automation", level: 2, where: "Recorded regression flows at Benih Baik" },
   { name: "Jest", icon: SiJest, color: "#C21325", category: "Automation", level: 2, where: "Backend unit and integration specs at OCX" },
   { name: "Postman", icon: SiPostman, color: "#FF6C37", category: "API", level: 3, where: "API test standards at Agate" },

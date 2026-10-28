@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaBriefcase, FaCode, FaSeedling, FaCheckCircle, FaClipboardCheck } from "react-icons/fa";
+import { FaBriefcase, FaCode, FaSeedling, FaCheckCircle, FaClipboardCheck, FaTrain } from "react-icons/fa";
 
 export const experiences = [
   {
@@ -38,6 +38,37 @@ export const experiences = [
   },
   {
     id: 2,
+    accentColor: "#f43f5e",
+    title: "Software QA Engineer (Freelance)",
+    company: "Labtek Indie",
+    icon: <FaTrain size={28} color="#f43f5e" />,
+    description: (
+      <>
+        <p className="experience-paragraph">
+          As a freelance QA Engineer, I led quality assurance for PT Kereta Api Indonesia's
+          recruitment web application, making sure candidates had a smooth experience and
+          the system stayed stable through every testing phase before production release.
+        </p>
+        <ul className="task-list">
+          {[
+            "Test Strategy: Designed and executed test strategies covering functional, UI/UX, API, and performance testing.",
+            "Automation Testing: Built and maintained end-to-end test suites using Cypress and Node.js to widen coverage and reduce manual effort.",
+            "Database Testing: Validated data integrity with PostgreSQL across the full recruitment flow.",
+            "Bug Lifecycle: Managed defects from discovery to verified fix, working closely with the development team.",
+            "Regression Testing: Ran regression across alpha and beta environments to keep releases stable.",
+            "Release Quality Gates: Validated new features against business requirements and supported the platform's production launch.",
+          ].map((task, index) => (
+            <li key={index}>
+              <FaCheckCircle className="task-icon" style={{ color: "#f43f5e" }} />
+              {task}
+            </li>
+          ))}
+        </ul>
+      </>
+    ),
+  },
+  {
+    id: 3,
     accentColor: "#00d4ff",
     title: "Web3 Lead QA Engineer",
     company: "Confiction Labs.",
@@ -70,7 +101,7 @@ export const experiences = [
     ),
   },
   {
-    id: 3,
+    id: 4,
     accentColor: "#7c3aed",
     title: "Senior Quality Assurance",
     company: "Agate",
@@ -106,7 +137,7 @@ export const experiences = [
     ),
   },
   {
-    id: 4,
+    id: 5,
     accentColor: "#10b981",
     title: "Associate QA Software",
     company: "BenihBaik.com",

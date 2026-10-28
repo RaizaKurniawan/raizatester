@@ -7,6 +7,7 @@ import { qaProjects, nonQaProjects } from "../components/Projects";
 // Roles without a known period render without a badge.
 const periods = {
   OCX: "Oct 2025 – Present",
+  "Labtek Indie": "Aug – Sep 2025",
   "Confiction Labs.": "Mar 2022 – May 2025",
   Agate: "Mar 2022 – Jun 2025",
   "BenihBaik.com": "Feb 2022 – Mar 2023",
