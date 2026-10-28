@@ -3,15 +3,19 @@ import { FaArrowLeft, FaGithub, FaLinkedin } from "react-icons/fa";
 import { experiences } from "../components/Experience";
 import { qaProjects, nonQaProjects } from "../components/Projects";
 
-// Dates only where they're known; the rest render without a period.
+// Dates come from the downloadable CV (public/assets/RaizaKurniawan_CV2025.pdf).
+// Roles without a known period render without a badge.
 const periods = {
   OCX: "Oct 2025 – Present",
-  "BenihBaik.com": "2022 – 2023",
+  "Confiction Labs.": "Mar 2022 – May 2025",
+  Agate: "Mar 2022 – Jun 2025",
+  "BenihBaik.com": "Feb 2022 – Mar 2023",
 };
 
 const projectPeriods = {
-  "Lets Flip": "3-month project",
-  "Paron Indonesia": "2021 – 2022",
+  "Lets Flip": "Jan – Feb 2021",
+  "Paron Indonesia": "Aug 2020 – Mar 2021",
+  "Integral Asia Pacific": "Nov 2018 – Feb 2020",
 };
 
 const fadeUp = (i) => ({
