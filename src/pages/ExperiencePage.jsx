@@ -3,7 +3,7 @@ import { FaArrowLeft, FaGithub, FaLinkedin } from "react-icons/fa";
 import { experiences } from "../components/Experience";
 import { qaProjects, nonQaProjects } from "../components/Projects";
 
-// Dates come from the downloadable CV (public/assets/RaizaKurniawan_CV2025.pdf).
+// Dates come from the downloadable CV (public/assets/RaizaKurniawan_CV2026.pdf).
 // Roles without a known period render without a badge.
 const periods = {
   OCX: "Oct 2025 – Present",

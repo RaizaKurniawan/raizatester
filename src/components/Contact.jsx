@@ -38,7 +38,7 @@ const links = [
     external: true,
   },
   {
-    href: "/assets/RaizaKurniawan_CV2025.pdf",
+    href: "/assets/RaizaKurniawan_CV2026.pdf",
     label: "Download CV",
     icon: <FaFilePdf />,
     primary: false,

@@ -7,7 +7,7 @@ const ResumeCVDownload = () => {
     const handleDownload = async () => {
         try {
             const resumeUrl = '/assets/RaizaKurniawan_Resume2025.pdf';
-            const cvUrl = '/assets/RaizaKurniawan_CV2025.pdf';
+            const cvUrl = '/assets/RaizaKurniawan_CV2026.pdf';
 
             // Download Resume
             const resumeResponse = await axios.get(resumeUrl, {
@@ -22,7 +22,7 @@ const ResumeCVDownload = () => {
             const cvResponse = await axios.get(cvUrl, {
                 responseType: 'blob',
             });
-            fileDownload(cvResponse.data, 'RaizaKurniawan_CV2025.pdf');
+            fileDownload(cvResponse.data, 'RaizaKurniawan_CV2026.pdf');
         } catch (error) {
             console.log('Error downloading files:', error);
         }
