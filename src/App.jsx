@@ -7,8 +7,7 @@ import Experience from './components/Experience';
 import Tools from './components/Tools';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Certifications from './components/Certifications';
-import Achievements from './components/Achievements';
+import Recognition from './components/Recognition';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -56,8 +55,7 @@ function App() {
       <Tools />
       <Projects />
       <Contact />
-      <Certifications />
-      <Achievements />
+      <Recognition />
       <Footer />
       <ScrollToTop />
     </div>

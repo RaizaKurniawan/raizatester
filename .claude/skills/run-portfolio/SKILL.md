@@ -73,6 +73,8 @@ removes Playwright again.
 - **`hash-nav.js`** - regression test for commit `16fa7be` (see below).
 - **`scroll-top.js`** - the floating back-to-top button on both entry points,
   at desktop and mobile widths.
+- **`recognition.js`** - the merged Recognition section (achievements +
+  certifications tabs) and the performance-review modal.
 
 `helpers.js` holds the shared launch/assert plumbing. Tests read expected
 values off the UI (for example, each filter chip's own count badge) rather
@@ -124,6 +126,12 @@ mistake leaves an invisible 46px overlay in the corner swallowing clicks.
 `scroll-top.js` checks this directly with `elementFromPoint`; keep that
 assertion if the styles change. Dropping `visibility: hidden` and leaving only
 `opacity: 0` is exactly the regression it catches.
+
+**Recognition holds two former sections.** `src/components/Recognition.jsx`
+replaced the separate Achievements and Certifications components. It renders
+both `#achievements` and `#certifications` ids so old links and the header nav
+still resolve - `recognition.js` asserts both anchors exist, so do not drop
+either when editing the markup.
 
 **The Tools section is intentionally light.** `background: #f8faff` in
 `src/index.css` on an otherwise dark site is a deliberate design choice, not a

@@ -4,7 +4,7 @@
 const { spawnSync } = require('child_process');
 const path = require('path');
 
-const suites = ['smoke.js', 'tools-filters.js', 'hash-nav.js', 'scroll-top.js'];
+const suites = ['smoke.js', 'tools-filters.js', 'hash-nav.js', 'scroll-top.js', 'recognition.js'];
 const failed = [];
 
 for (const s of suites) {
