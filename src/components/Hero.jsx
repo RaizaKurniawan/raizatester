@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaArrowDown } from 'react-icons/fa';
+import { FaArrowRight, FaFilePdf } from 'react-icons/fa';
 
+// Current title first: a recruiter reading the first frame should see the
+// senior role, not a junior one that happens to animate in first.
 const ROLES = [
-  "QA Engineer",
+  "Senior QA Engineer",
   "Test Automation Engineer",
   "Web3 QA Lead",
   "API Testing Specialist",
@@ -90,20 +92,39 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.65 }}
         >
-          Dedicated to building high-quality, scalable applications.
+          I own quality for a multi-platform marketplace and run an evidence-based
+          QA pipeline where every verdict traces back to the build it was tested on.
         </motion.p>
 
-        <motion.a
-          href="#about"
-          className="cta-button"
+        {/* Proof above the fold: the detail that usually sits 3000px down. */}
+        <motion.ul
+          className="hero-proof"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <li><strong>239</strong> fixes mutation-tested to prove the tests catch regressions</li>
+          <li><strong>300+</strong> spec Playwright suite across web, admin and CMS</li>
+          <li><strong>231.69 ETH</strong> (~US$650K) in Web3 products shipped</li>
+        </motion.ul>
+
+        <motion.div
+          className="hero-actions"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          whileHover={{ scale: 1.05, boxShadow: "0 0 36px rgba(0,212,255,0.55)" }}
-          whileTap={{ scale: 0.97 }}
+          transition={{ duration: 0.8, delay: 0.95 }}
         >
-          Scroll Down <FaArrowDown size={15} />
-        </motion.a>
+          <a href="/experience" className="cta-button">
+            View Experience <FaArrowRight size={14} aria-hidden="true" />
+          </a>
+          <a
+            href="/assets/RaizaKurniawan_CV2026.pdf"
+            className="cta-button is-secondary"
+            download
+          >
+            Download CV <FaFilePdf size={14} aria-hidden="true" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

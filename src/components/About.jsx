@@ -23,9 +23,9 @@ const useCounter = (target, duration = 2000, active = false) => {
 };
 
 const stats = [
-  { icon: <FaBriefcase size={22} />, value: 5,   suffix: "+",   label: "Years Exp."  },
+  { icon: <FaBriefcase size={22} />, value: 6,   suffix: "+",   label: "Years in QA" },
   { icon: <FaLaptopCode size={22} />, value: 11,  suffix: "",    label: "Products"    },
-  { icon: <FaUser size={22} />,       value: 3,   suffix: "",    label: "Companies"   },
+  { icon: <FaUser size={22} />,       value: 9,   suffix: "",    label: "Companies"   },
   { icon: <FaEthereum size={22} />,   value: 231, suffix: " ETH",label: "Contributed" },
 ];
 
@@ -90,11 +90,12 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            Hi! I'm Raiza Kurniawan, a passionate QA Engineer dedicated to building
-            high-quality, scalable applications. With 5 years of experience in
-            software testing and automation, I focus on ensuring that applications
-            run smoothly, meet user expectations and contributed to gains 231.69 ETH
-            equal to US$650,000 in blockchain projects.
+            Hi! I'm Raiza Kurniawan, a Senior QA Engineer with 6+ years in software
+            testing and automation. I currently own quality end to end for a
+            trading-card marketplace across web, admin and mobile, and before that
+            led QA for Web3 products that contributed gains of 231.69 ETH, about
+            US$650,000. I care most about tests that actually catch regressions
+            rather than tests that merely pass.
           </motion.p>
 
           <div className="about-stats">

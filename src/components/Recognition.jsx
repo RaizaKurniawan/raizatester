@@ -204,6 +204,21 @@ const Recognition = () => {
         </AnimatePresence>
       </motion.div>
 
+      {/* Certifications are deliberately few, so point at the verifiable work
+          instead of padding the list. */}
+      {tab === "certifications" && (
+        <motion.p
+          className="recognition-note"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.15 }}
+        >
+          Most of what I know came from shipping, not exams. For evidence of depth,
+          the <a href="/experience">experience page</a> breaks down the pipelines,
+          suites and bugs behind each role.
+        </motion.p>
+      )}
+
       <AnimatePresence>
         {isModalOpen && (
           <motion.div

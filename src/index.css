@@ -243,12 +243,75 @@ header.scrolled {
 
 .hero-subtitle {
   font-size: 16px;
-  margin-bottom: 44px;
-  opacity: 0.6;
+  margin-bottom: 28px;
+  opacity: 0.75;
   line-height: 1.8;
-  max-width: 520px;
+  max-width: 620px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Proof points, above the fold. */
+.hero-proof {
+  list-style: none;
+  /* Three equal columns so the points read as one row, rather than wrapping
+     1-then-2 and looking accidental. */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: 10px 26px;
+  max-width: 940px;
+  margin: 0 auto 38px;
+  padding: 0;
+}
+
+.hero-proof li {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(241, 245, 249, 0.72);
+}
+
+.hero-proof li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.hero-proof strong {
+  color: var(--accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* Secondary action: same shape, quieter weight, so the primary still leads. */
+.cta-button.is-secondary {
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.45);
+  color: var(--accent);
+  animation: none;
+}
+
+.cta-button.is-secondary:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: var(--accent);
+}
+
+.cta-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .cta-button {
@@ -1004,6 +1067,24 @@ header.scrolled {
   text-decoration: underline;
 }
 
+.recognition-note {
+  max-width: 560px;
+  margin: 28px auto 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+.recognition-note a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.recognition-note a:hover {
+  text-decoration: underline;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .recognition-card:hover {
     transform: none;
@@ -1344,6 +1425,25 @@ footer {
   }
 
   .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .hero-proof {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 0 4px;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .cta-button {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 13px 22px;
     font-size: 14px;
   }
 
