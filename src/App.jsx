@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -11,7 +12,40 @@ import Achievements from './components/Achievements';
 import Footer from './components/Footer';
 
 
+// The page is client-rendered, so a #hash in the URL points at an element that
+// does not exist yet when the browser tries to jump to it. Re-apply the hash
+// once React has mounted, and keep correcting while the entrance animations
+// below the target are still shifting its position.
+function useHashScroll() {
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+
+    let raf = 0;
+    let frames = 0;
+    let settled = 0;
+    let lastTop = null;
+
+    const tick = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        const top = Math.round(el.getBoundingClientRect().top + window.scrollY);
+        settled = top === lastTop ? settled + 1 : 0;
+        lastTop = top;
+        el.scrollIntoView({ block: 'start' });
+      }
+      // Stop once the target has held still for ~0.5s, or after ~3s.
+      if (settled < 30 && (frames += 1) < 180) raf = requestAnimationFrame(tick);
+    };
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+}
+
 function App() {
+  useHashScroll();
+
   return (
     <div>
       <Header />

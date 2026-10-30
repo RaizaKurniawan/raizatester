@@ -23,6 +23,12 @@ html, body {
   scroll-behavior: smooth;
 }
 
+/* Keep section headings clear of the 56px sticky header when jumping to #hash. */
+:target,
+section[id] {
+  scroll-margin-top: 72px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8faff;

@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
         <p className="footer-tagline">Building quality into every layer.</p>
         <div className="footer-divider" />
-        <p className="footer-copy">© 2025 Raiza Kurniawan. All Rights Reserved.</p>
+        <p className="footer-copy">© {new Date().getFullYear()} Raiza Kurniawan. All Rights Reserved.</p>
       </div>
     </footer>
   );
