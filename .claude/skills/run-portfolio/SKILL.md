@@ -71,6 +71,8 @@ removes Playwright again.
 - **`tools-filters.js`** - all category filters in the Tools section, plus
   rapid switching, keyboard activation, and duplicate-card checks.
 - **`hash-nav.js`** - regression test for commit `16fa7be` (see below).
+- **`scroll-top.js`** - the floating back-to-top button on both entry points,
+  at desktop and mobile widths.
 
 `helpers.js` holds the shared launch/assert plumbing. Tests read expected
 values off the UI (for example, each filter chip's own count badge) rather
@@ -114,6 +116,14 @@ browser resolves natively - it passes with or without `useHashScroll`, so a
 loop that reuses one page proves nothing. This was caught by disabling the fix
 and watching the deep-link assertions pass anyway. Only a cold load reproduces
 the original bug. `hash-nav.js` opens a new page per link for this reason.
+
+**The back-to-top button stays mounted and fades.** `ScrollToTop` is rendered
+once per entry point (`src/App.jsx` and `src/pages/ExperiencePage.jsx`) and
+hides with `opacity: 0; visibility: hidden` rather than unmounting, so a CSS
+mistake leaves an invisible 46px overlay in the corner swallowing clicks.
+`scroll-top.js` checks this directly with `elementFromPoint`; keep that
+assertion if the styles change. Dropping `visibility: hidden` and leaving only
+`opacity: 0` is exactly the regression it catches.
 
 **The Tools section is intentionally light.** `background: #f8faff` in
 `src/index.css` on an otherwise dark site is a deliberate design choice, not a

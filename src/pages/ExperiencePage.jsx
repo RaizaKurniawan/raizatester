@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaArrowLeft, FaGithub, FaLinkedin } from "react-icons/fa";
 import { experiences } from "../components/Experience";
 import { qaProjects, nonQaProjects } from "../components/Projects";
+import ScrollToTop from "../components/ScrollToTop";
 
 // Dates come from the downloadable CV (public/assets/RaizaKurniawan_CV2026.pdf).
 // Roles without a known period render without a badge.
@@ -116,6 +117,7 @@ const ExperiencePage = () => {
         <a href="/#contact" className="xp-cta">Get in touch</a>
         <p>© {new Date().getFullYear()} Raiza Kurniawan. All Rights Reserved.</p>
       </footer>
+      <ScrollToTop />
     </div>
   );
 };

@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Certifications from './components/Certifications';
 import Achievements from './components/Achievements';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 
 // The page is client-rendered, so a #hash in the URL points at an element that
@@ -58,6 +59,7 @@ function App() {
       <Certifications />
       <Achievements />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
